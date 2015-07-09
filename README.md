@@ -5,7 +5,7 @@
 * Rails 4.2.0
 * Ruby 2.2.1
 
-*Running on PostgreSQL -- install Postgres.app to run database locally
+*Running on PostgreSQL -- install Postgres.app to run database locally on Mac
 
 #Gem notes:
 *Uses friendly_id to generate string URL tails. Never call user.id, only user.friendly.id
@@ -23,7 +23,7 @@
 * go to http://localhost:3000/
 
 
-#Contact and COmmunity
+#Contact and Community
 
 * Contact julian.deocampo@gmail.com for Slack access or for troubleshooting
 
