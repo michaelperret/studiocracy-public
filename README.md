@@ -1,16 +1,17 @@
-<<<<<<< HEAD
 # README
 
-# Rails 4.2.0
-# Ruby 2.2.1
+* See onboarding guides here: https://drive.google.com/folderview?id=0BxTarWOIystqflByWkkzSy1VQTNUS2xpT2JsUWlxTThQdVpFdHdRWUdqVXNadHdab0dXQVk&usp=sharing
 
-#Running on PostgreSQL -- install Postgres.app to run database locally
+* Rails 4.2.0
+* Ruby 2.2.1
+
+*Running on PostgreSQL -- install Postgres.app to run database locally
 
 #Gem notes:
-#Uses friendly_id to generate string URL tails. Never call user.id, only user.friendly.id
-#Uses devise for user authentication
-#Users paperclip 4.2.1 for media uploads
-#Uses Stripe gem. Stripe keys in file are dummy keys. Real keys will be passed into environment when server starts.
+*Uses friendly_id to generate string URL tails. Never call user.id, only user.friendly.id
+*Uses devise for user authentication
+*Users paperclip 4.2.1 for media uploads
+*Uses Stripe gem. Stripe keys in file are dummy keys. Real keys will be passed into environment when server starts.
 
 # To deploy for testing
 
@@ -20,6 +21,11 @@
 * Run rake db:migrate in command line
 * run rails s in folder root
 * go to http://localhost:3000/
+
+
+#Contact and COmmunity
+
+* Contact julian.deocampo@gmail.com for Slack access or for troubleshooting
 
 =======
 # studiocracy
