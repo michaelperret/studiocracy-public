@@ -8,6 +8,17 @@
 
 *Running on PostgreSQL -- install Postgres.app to run database locally on Mac
 
+# HOW TO CONTRIBUTE (for git novices)
+Fork from the main Studiocracy repo at https://github.com/Studiocracy/studiocracy-public
+Do a "git clone https://github.com/"YOUR USERNAME"/studiocracy-public" into your workspace.
+Whenever you start a new contribution, always compare your fork with the origin on Github
+to update your remote repo and always do a "git pull" to update your local repo. Try to
+keep your commits compartmentalized and document what your code is doing both in the commit
+message and in comments. Once you think your contribution is ready for review, push your
+changes to the remote and make a pull request to the origin at the url above with your fork.
+After the developers and the community review your changes, they're in!
+If you have any questions, you're on a computer, Google it!
+
 #Gem notes:
 * Uses friendly_id to generate string URL tails. Never call user.id, only user.friendly.id
 * Uses devise for user authentication
