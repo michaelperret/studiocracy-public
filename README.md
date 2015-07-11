@@ -9,6 +9,7 @@
 * Running on PostgreSQL -- install Postgres.app to run database locally on Mac
 
 # How to Contribute
+* You can either set your development environment up locally or use a cloud-based IDE to let you work in your browser. While most of our developers work locally, in-browser IDEs may be a better alternative for users who may not want to go through the effort of installing Linux on a Windows machine. We reccommend Cloud9: https://c9.io/
 * See onboarding guides here:
 https://drive.google.com/folderview?id=0BxTarWOIystqflByWkkzSy1VQTNUS2xpT2JsUWlxTThQdVpFdHdRWUdqVXNadHdab0dXQVk&usp=sharing
 * Read and follow this SO answer about the Github workflow: http://stackoverflow.com/questions/20956154/whats-the-workflow-to-contribute-to-an-open-source-project-using-git-pull-reque
