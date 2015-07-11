@@ -1,6 +1,7 @@
 <% comment_array = @post.comments.sort_by {|comment| comment.votecount }.reverse %>
 <% comment_array.each do |comment| %>
-  <p><%= comment.fullname %> on <%= l(comment.created_at, format: '%B, %d %Y') %>
+  <p><%= image_tag(comment.image.url(:small)) %>
+    <%= comment.fullname %> on <%= l(comment.created_at, format: '%B, %d %Y') %>
     <div class='votes'>
       <%= comment.up_minus_down %>
       <!--Upvoting-->
@@ -25,4 +26,3 @@
   <div class="reply_box"></div>-->
 
 <% end %>
-
