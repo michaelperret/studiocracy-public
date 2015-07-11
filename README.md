@@ -1,31 +1,38 @@
 # README
 
-* See onboarding guides here: https://drive.google.com/folderview?id=0BxTarWOIystqflByWkkzSy1VQTNUS2xpT2JsUWlxTThQdVpFdHdRWUdqVXNadHdab0dXQVk&usp=sharing
+
 
 * Rails 4.2.0
 * Ruby 2.2.1
+* Much of the work on this project is done in RubyMine, which you can grab with a student license here: https://www.jetbrains.com/student/
 
-*Running on PostgreSQL -- install Postgres.app to run database locally on Mac
+* Running on PostgreSQL -- install Postgres.app to run database locally on Mac
+
+# How to Contribute
+* See onboarding guides here:
+https://drive.google.com/folderview?id=0BxTarWOIystqflByWkkzSy1VQTNUS2xpT2JsUWlxTThQdVpFdHdRWUdqVXNadHdab0dXQVk&usp=sharing
+* Read and follow this SO answer about the Github workflow: http://stackoverflow.com/questions/20956154/whats-the-workflow-to-contribute-to-an-open-source-project-using-git-pull-reque
+* We do project management on Taiga.io. You can see our current project status and to-do list here:
+ https://tree.taiga.io/project/jcdjulian-studiocracy/
+* To become a member on our team on Taiga and receive assignments, make a Taiga account and email julian.deocampo@gmail.com for an invitation
+* In the Kanban section you can see our project board. Tasks in the first column, "Ready" are available for anyone to assign to themselves and work on. When you work on a task, move it to the "In Progress" board. When you've made your pull request, send it to the "Ready for Test" board. If we approve your change, it'll be moved to "Done". Otherwise, we'll work with you on your revision and return it to "In progress".
+* Under backlog, you can view a burndown chart of our tasks this sprint and how close we're getting to the latest release.
+* Communication in handled through the studiocracy-public Slack chat. Contact julian.deocampo@gmail.com for Slack access or for troubleshooting
 
 #Gem notes:
-*Uses friendly_id to generate string URL tails. Never call user.id, only user.friendly.id
-*Uses devise for user authentication
-*Users paperclip 4.2.1 for media uploads
-*Uses Stripe gem. Stripe keys in file are dummy keys. Real keys will be passed into environment when server starts.
+* Uses friendly_id to generate string URL tails. Never call user.id, only user.friendly.id
+* Uses devise for user authentication
+* Users paperclip 4.2.1 for media uploads
+* Uses Stripe gem. Stripe keys in file are dummy keys. Real keys will be passed into environment when server starts.
 
 # To deploy for testing
 
-* Clone repository.
+* Fork and clone repository.
 * Ensure you have rails, rake, bundler, and ruby installed (look up install guide)
 * Run Postgres
 * Run rake db:migrate in command line
 * run rails s in folder root
 * go to http://localhost:3000/
-
-
-#Contact and Community
-
-* Contact julian.deocampo@gmail.com for Slack access or for troubleshooting
 
 =======
 # studiocracy
