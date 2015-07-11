@@ -9,6 +9,7 @@ devise :omniauthable
   has_many :comment_votes
 
   has_attached_file :image, styles: { small: "64x64", med: "300x300", large: "500x500" }
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
   extend FriendlyId
   friendly_id :fullname, use: :slugged
