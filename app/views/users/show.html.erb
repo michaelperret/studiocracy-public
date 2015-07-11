@@ -17,17 +17,17 @@
       			<% end %>
       			<%= link_to "Comments: " + post.comments.count.to_s, post, class: 'center' %>
 
-<!--	<% if current_user && current_user.votes.where(:post_id => post.id, :up => false).present? %>
+<!--	<% if current_user && current_user.post_votes.where(:post_id => post.id, :state => 0).present? %>
 		*
 		<% else %>
-		<%= link_to "-", votes_path(:vote => {:post_id => post.id, :up => false}), :method => :post %>
+		    <%= link_to "-", post_votes_path(:post_vote => {:post_id => post.id, :state => 0}), :method => :post %>
 		<% end %>-->
 		<p class='center'>Patrons:
-			<%= post.votes.where(:up => true).count %>
-			<% if current_user && current_user.votes.where(:post_id => post.id, :up => true).present? %>
-			<%= link_to "✓", votes_path(:vote => {:post_id => post.id, :up => false}), :method => :post %>
+			<%= post.post_votes.where(:state => 1).count %>
+			<% if current_user && current_user.post_votes.where(:post_id => post.id, :state => 1).present? %>
+			    <%= link_to "✓", post_votes_path(:post_vote => {:post_id => post.id, :state => 0}), :method => :post %>
 			<% else %>
-			<%= link_to "+", votes_path(:vote => {:post_id => post.id, :up => true}), :method => :post %>
+			    <%= link_to "+", post_votes_path(:post_vote => {:post_id => post.id, :state => 1}), :method => :post %>
 			<% end %>
 		</p>
 	</div>
