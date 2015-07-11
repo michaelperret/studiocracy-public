@@ -4,5 +4,4 @@
 /public/system
 /.idea
 .sass-cache
-/config/application.yml
 /.secret
