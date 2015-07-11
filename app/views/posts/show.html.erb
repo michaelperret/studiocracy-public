@@ -98,6 +98,14 @@
                 </script>
             <% end %>
           </div>
+
+          <div id="tags">
+            <% @post.tags.each do |tag| %>
+                <p>
+                  <%= tag.tag_name %>
+                </p>
+            <% end %>
+          </div>
         </section>
       </div>
       <div class="tab-pane" id="shipping">
