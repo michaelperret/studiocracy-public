@@ -3,7 +3,7 @@
 DOMAIN: "www.studiocracy.com"
 SENDER_EMAIL: "test@studiocracy.com"
 MAILER_DOMAIN: "studiocracy.com"
-SMTP_SERVER: "hendrix.asoshared.com"
+SMTP_SERVER: "studiocracy.com"
 SMTP_PORT: "465"
 SMTP_USER: "test@studiocracy.com"
 SMTP_PWD: "test123"
