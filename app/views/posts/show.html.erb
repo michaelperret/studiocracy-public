@@ -100,11 +100,22 @@
           </div>
 
           <div id="tags">
-            <% @post.tags.each do |tag| %>
-                <p>
-                  <%= tag.tag_name %>
-                </p>
-            <% end %>
+            <script>
+                $(function() {
+                            $('#readOnlyTags').tagit({
+                                readOnly: true
+                            });
+                        });
+            </script>
+            <br/>
+            <ul id="readOnlyTags">
+              <% @post.tags.each do |tag| %>
+                  <li>
+                    <%= tag.tag_name %>
+                  </li>
+              <% end %>
+            </ul>
+
           </div>
         </section>
       </div>
@@ -144,7 +155,7 @@
 
       <div class="jcarousel">
         <ul>
-          <% @post.user.posts.each do |post| %>
+          <% @post.user.posts.order('created_at DESC').limit(8).each do |post| %>
               <% if post.id != @post.id %>
                   <li>
                     <div class="post carousel-box" id="<%= post.id %>">
