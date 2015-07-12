@@ -11,11 +11,11 @@ class PostsController < ApplicationController
 
 	def create
 		@post = current_user.posts.create(post_params)
-		tags_array = tags_params[:tags].split
-		tags_params[:tags].each { |t|
-			Tag.new(name: t)
+		# Split the tags string and create the tags
+		tags_array = tags_params[:tags].split(',')
+		tags_array.each { |tag|
+			@tag = @post.tags.create({:tag_name => tag})
 		}
-		@tag = @post.tags.create({:tag_name => tags_params[:tags]})
 		if @post.save
 			redirect_to post_path(@post), :notice => "Post was created successfully."
 		else
