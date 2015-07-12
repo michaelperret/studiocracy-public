@@ -10,6 +10,7 @@
 
 # How to Contribute
 * You can either set your development environment up locally or use a cloud-based IDE to let you work in your browser. While most of our developers work locally, in-browser IDEs may be a better alternative for users who may not want to go through the effort of installing Linux on a Windows machine. We reccommend Cloud9: https://c9.io/
+* FULL STEP-BY-STEP GUIDE ON CLOUD9 SETUP AVAILABLE HERE: https://docs.google.com/document/d/1Iz6dZUZajbmrXTQJi7UUr5DE8zuyPRtfWt_Yc-g2H24/edit?usp=sharing
 * First fork and clone this repo and import it into Cloud9. Select Ruby on Rails application. Run bundle install in the command line. Then follow the steps in this post ALMOST exactly. The only thing you need to change is the database name from "sample_app_development" to "studiocracy_development" and do so for all three database names: http://stackoverflow.com/questions/26545746/cloud9-postgres
 * You should be set up! If you run into any errors, document them here and ask questions on the Slack.
 * See onboarding guides for local setup here:
