@@ -56,6 +56,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(
     :email,
     :password,
+    :image,
     :password_confirmation,
     :admin,
     :locked,

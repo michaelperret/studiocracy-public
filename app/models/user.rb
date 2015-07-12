@@ -2,11 +2,14 @@ class User < ActiveRecord::Base
 
 devise :omniauthable
   
-# Relations
-has_many :posts
-has_many :comments
-has_many :post_votes
-has_many :comment_votes
+  # Relations
+  has_many :posts
+  has_many :comments
+  has_many :post_votes
+  has_many :comment_votes
+
+  has_attached_file :image, styles: { small: "64x64", med: "300x300", large: "500x500" }
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
   extend FriendlyId
   friendly_id :fullname, use: :slugged
@@ -15,7 +18,9 @@ has_many :comment_votes
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :validatable, :confirmable
+  :recoverable, :rememberable, :trackable, :validatable
+# Confirmation email disabled due to timeout errors with our host
+# , :confirmable
   
   # Pagination
   paginates_per 100

@@ -17,7 +17,8 @@ u.save!
 		password: "1234",
 		password_confirmation: "1234",
 		first_name: "user",
-		last_name: "\##{i}"
+		last_name: "\##{i}",
+    image: File.new('app/assets/images/default_icon.jpg')
 	)
 	u.skip_confirmation!
 	u.save!

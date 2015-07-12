@@ -27,6 +27,7 @@
 
   <div class="col-md-4 col-sm-12 post-header">
     <h3><%= @post.title.upcase %></h3>
+    <%=image_tag(@post.image.url(:small)) %>
     <h4 class="open-sans"><%= @post.user.fullname %></h4><br/>
 
     <!-- Insert icons -->
@@ -95,6 +96,14 @@
                 data-description='<%= number_to_currency(@post.price, :unit => "$") %> for "<%= @post.title %>" by <%= @post.user.fullname %>'
                 data-amount="'@post.price'">
                 </script>
+            <% end %>
+          </div>
+
+          <div id="tags">
+            <% @post.tags.each do |tag| %>
+                <p>
+                  <%= tag.tag_name %>
+                </p>
             <% end %>
           </div>
         </section>
