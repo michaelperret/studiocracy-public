@@ -8,7 +8,9 @@ devise :omniauthable
   has_many :post_votes
   has_many :comment_votes
 
-  has_attached_file :image, styles: { small: "64x64", med: "300x300", large: "500x500" }
+  has_attached_file :image,
+                    styles: { small: "64x64", med: "300x300", large: "500x500" },
+                    :default_url => 'default_icon.jpg'
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
   extend FriendlyId
