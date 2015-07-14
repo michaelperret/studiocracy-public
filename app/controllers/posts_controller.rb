@@ -11,6 +11,11 @@ class PostsController < ApplicationController
 
 	def create
 		@post = current_user.posts.create(post_params)
+		# Split the tags string and create the tags
+		tags_array = tags_params[:tags].split(',')
+		tags_array.each { |tag|
+			@tag = @post.tags.create({:tag_name => tag})
+		}
 		if @post.save
 			redirect_to post_path(@post), :notice => "Post was created successfully."
 		else
@@ -40,6 +45,10 @@ class PostsController < ApplicationController
 	private
 	def post_params
 		params.require(:post).permit(:title, :content_md, :image, :user_id, :year_created, :medium, :dimension_height, :dimension_width, :measurement, :weight_in_pounds, :price, :quantity)
+	end
+
+	def tags_params
+		params.permit(:tags)
 	end
 
 end

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui.min
 //= require turbolinks
 //= require bootstrap 
 //= require analytics
@@ -20,5 +21,6 @@
 //= require jquery.contenthover
 //= require overlay
 //= require jcarousel.responsive
+//= require tag-it.min
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts/.

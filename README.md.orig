@@ -1,7 +1,6 @@
 # README
 
-# studiocracy
-Studiocracy addresses the difficulty emerging artists have with getting their work noticed by letting them bypass the gallery system and interact directly with their communities. Unlike other art retailers, Studiocracy is a social network first and a marketplace second. We track user engagement through a community voting system and produce data analytics to help artists understand and develop their followings without the pressure to treat their studio like a business. In doing so, we provide buyers and sellers with the context to successfully and knowledgably navigate through the art world and make their voices heard.
+
 
 * Rails 4.2.0
 * Ruby 2.2.1
@@ -40,18 +39,10 @@ https://drive.google.com/folderview?id=0BxTarWOIystqflByWkkzSy1VQTNUS2xpT2JsUWlx
 * run rails s in folder root
 * go to http://localhost:3000/
 
-#Project Structure
-We operate similar to other companies whose core products are open-source and exist to serve the development of the project. There's studiocracy-public, our open source project that anyone can be a volunteer and work on. Studiocracy, Inc. is the entity that manages and maintains the project, hosts it, and makes sure we have the finances to continue growing it.
-
-In our team, there are three levels of membership. The first is as an open source contributor, which is purely voluntary. These members can contribute to studiocracy-public at their skill level and are not obligated to attend meetings or appear in office. These members are largely unaffiliated with Studiocracy, Inc.
-
-The second role is as a core team member, meaning that this person contributes significantly to the outcome of the company, attends staff meetings and manage the project. These members are considered for equity splits in the company contingent on performing their duties in the company.
-
-The third role is legal employee, which is currently just limited to myself (Julian) for legal purposes. We don't currently have the funding to pay a salary or stipend, but one day we want to be able to move our Core Team Members to full time positions to keep the project growing.
-
-We have Agile-style meetings Wednesday at 7pm and Sundays at 4pm - which you can attend either in person at our office or through Google Hangouts. Anyone is welcome to attend the meetings and participate. During meeting, a contributor can petition a request to be a team member and make their case. The current team members will then discuss and vote after the meeting whether to bring the person into the company.
-
-Equity is handled in a similar way. You make a case for your equity request at meeting and the company will vote on what number they think should be offered.
+=======
+# studiocracy
+Social marketplace for artists to connect with their communities and and have their work appreciated.
+<<<<<<< HEAD
 
 =======
-
+>>>>>>> 1bbb8e4ea812a07a59917501dfa0c9f284de08d8

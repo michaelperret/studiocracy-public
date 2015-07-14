@@ -37,8 +37,19 @@
     <%= f.label :quantity, "Quantity:"  %>
     <%= f.text_field :quantity %><br />
 
+            <!--tag-it.js-->
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#postTags').tagit({
+                        singleField: true,
+                        singleFieldNode: $('#tagField')
+                    });
+                });
+            </script>
+            <ul id="postTags"></ul>
+            <input name="tags" id="tagField" type="hidden" name="post[tags]" id="post_tags">
     <div class="actions">
-      <%= f.submit "Submit" %>
+      <%= f.submit "Submit", :id=>"create_post" %>
     </div>
     <% end %>
   </div>

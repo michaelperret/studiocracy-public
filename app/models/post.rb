@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   has_attached_file :image, styles: { small: "64x64", med: "300x300", large: "500x500" }
 
   # Validations
-  validates :title, presence: true, length: { maximum: 100 }, uniqueness: true
+  validates :title, presence: true, length: { maximum: 100 }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
   # Pagination
@@ -17,6 +17,7 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :post_votes
   has_many :tags
+  accepts_nested_attributes_for :tags
 
   # Scopes
   scope :published, lambda {
