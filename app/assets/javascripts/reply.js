@@ -10,13 +10,27 @@ $(document).ready(function() {
 
 /* native javascript implementation */
 
-document.addEventListener('DOMContentLoaded', appendReplyBox);
+document.addEventListener('DOMContentLoaded', replyEventListeners);
 
 function appendReplyBox () {
-    var parentID = this.parentNode.id;
-    var node = docume.nt.createElement('div');
-    node.className = "reply-box";
-    node.innerHTML = '<textarea rows=3 cols=80></textarea>\n<button>save</button>';
+    var postedBool = false, parent = this.parentNode, parentID = parent.id;
+
+    var childrenNodes = document.getElementById(parentID).childNodes;
+    for (var x = 0; x < childrenNodes.length; x++) {
+        if (childrenNodes[x].className === 'reply-box') {
+            postedBool = true;
+        }
+    }
+
+    if (postedBool === false) { // if === false, then the comment box doesn't already exist and should be created
+        var node = document.createElement('div'); // create a div
+        node.className = "reply-box"; // with a class name of reply box
+
+        node.innerHTML = '<textarea rows=3 cols=80></textarea>\n<button>save</button>'; // create textarea
+        parent.appendChild(node); // append the node to parent
+    } else {
+        // do nothing
+    }
 }
 
 function replyEventListeners () {
