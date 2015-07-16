@@ -60,6 +60,18 @@ blockquote {
   text-align: center;
 }
 
+.up_vote {
+  color: #e21760;
+}
+
+.null_vote {
+  color: #d1d1d1;
+}
+
+.down_vote {
+  color: #22adc2;
+}
+
 .num_votes {
   text-align: center;
   position: relative;
