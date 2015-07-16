@@ -3,17 +3,17 @@
       <div class='votes'>
         <!--Upvoting-->
         <% if current_user.comment_votes.where(:comment_id => comment.id, :state => 1).present? %>
-            <%= link_to '▲', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 0}), :class => 'up_vote', :method => :post %>
+            <%= link_to '▲', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 0}), :class => 'up_vote', :id => "up_vote-#{comment.id}", :method => :post %>
             <div class='num_votes'><%= comment.up_minus_down %></div>
-            <%= link_to '▼', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => -1}), :class => 'null_vote', :method=> :post %>
+            <%= link_to '▼', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => -1}), :class => 'null_vote', :id => "null_vote-#{comment.id}", :method=> :post %>
         <% elsif current_user.comment_votes.where(:comment_id => comment.id, :state => -1).present? %>
-            <%= link_to '▲', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 1}), :class => 'null_vote', :method => :post %>
+            <%= link_to '▲', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 1}), :class => 'null_vote', :id => "null_vote-#{comment.id}", :method => :post %>
             <div class='num_votes'><%= comment.up_minus_down %></div>
-            <%= link_to '▼', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 0}), :class => 'down_vote', :method => :post %>
+            <%= link_to '▼', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 0}), :class => 'down_vote', :id => "down_vote-#{comment.id}", :method => :post %>
         <% else %>
-            <%= link_to '▲', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 1}), :class => 'null_vote', :method => :post %>
+            <%= link_to '▲', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => 1}), :class => 'null_vote', :id => "null_vote-#{comment.id}", :method => :post %>
             <div class='num_votes'><%= comment.up_minus_down %></div>
-            <%= link_to '▼', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => -1}), :class => 'null_vote', :method => :post %>
+            <%= link_to '▼', comment_votes_path(:comment_vote => {:comment_id => comment.id, :state => -1}), :class => 'null_vote', :id => "null_vote-#{comment.id}", :method => :post %>
         <% end %>
       </div>
 
