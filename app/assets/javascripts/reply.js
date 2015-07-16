@@ -2,6 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', replyEventListeners);
 
+function remove(id) {
+    return (elem = document.getElementById(id)).parentNode.removeChild(elem);
+}
+
 function appendReplyBox () {
     /*
         postedBool : checks if the comment-box already exists under the comment.
@@ -22,11 +26,12 @@ function appendReplyBox () {
     if (postedBool === false) {
         var node = document.createElement('div'); // create a div
         node.className = "reply-box"; // with a class name of reply box
+        node.id = "reply-box_" + parent.id;
 
-        node.innerHTML = '<textarea rows=3 cols=80></textarea>\n<button>save</button>'; // create textarea
+        node.innerHTML = '<textarea rows=3 cols=80></textarea>\n<br />\n<button>save</button>'; // create textarea
         parent.appendChild(node); // append the node to parent
     } else {
-        // do nothing
+        remove("reply-box_" + parent.id);
     }
 }
 
