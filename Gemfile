@@ -88,6 +88,14 @@ gem 'jquery-infinite-pages'
 # Nesting for comments
 gem 'closure_tree'
 
+# Solr search engine
+gem 'sunspot_rails'
+
+group :development do
+  gem 'sunspot_solr'
+end
+
+
 group :development, :test do
 gem 'foreman'
 end
