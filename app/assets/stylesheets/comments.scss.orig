@@ -59,6 +59,21 @@ $pink-hover: #ef4d88;
   text-align: center;
 }
 
+<<<<<<< HEAD
+.upvote {
+  color: #e21760;
+}
+
+.nullvote {
+  color: #d1d1d1;
+}
+
+.downvote {
+  color: #22adc2;
+}
+
+.num_votes {
+=======
 .comments-section .upvote {
   color: #e21760;
 }
@@ -72,6 +87,7 @@ $pink-hover: #ef4d88;
 }
 
 .comments-section .num_votes {
+>>>>>>> 94457aad718ec8bf2c2628710c65262c483a152f
   text-align: center;
   position: relative;
   left: 1px;
