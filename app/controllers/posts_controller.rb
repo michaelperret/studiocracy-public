@@ -1,5 +1,12 @@
 class PostsController < ApplicationController
 
+	def index
+		@search = Post.search do
+			fulltext params[:search]
+		end
+		@posts = @search.results
+	end
+
 	def show
 		@post = Post.find(params[:id])
 		@comment = Comment.new

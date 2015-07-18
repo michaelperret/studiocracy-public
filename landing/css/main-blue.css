@@ -1252,3 +1252,24 @@ header p{
     transform: scale3d(1.1, 1.1, 1.1);
   }
 }
+
+#popup-signin {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(42,69,90,0.7);
+  z-index: 100;
+}
+
+#mc_embed_signup {
+  margin: calc((100vh - 500px) / 2) auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+#mc_embed_signup label {
+  margin-left: 5px;
+}
