@@ -1,6 +1,84 @@
+		<div class="row">
+		  <div class="col-md-12 profile-page-header letter-spaced">
+			<h3><%= @user.fullname %> // SHOP NAME</h3>
+		  </div>
+		</div>
+		<div class="row listing profile-listing profile-break shadow">
+			<div class="col-md-4 artist">
+				<div class="row artist-header shadow">
+					<h2><%= @user.fullname %></h2>
+					<div class="artist-info">
+						<div class="image-placeholder"></div>
+						<div class="artist-location">
+							From <%= @user.city %>, <%= @user.state %><br />
+							URL
+						</div>
+					</div>
+				</div>
+				<div class="row shadow">
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+				<div class="row shadow">
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+				<div class="row shadow">
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+			</div>
+		  	<div class="col-md-6 featured shadow">
+		  		<div class="row featured-header">
+					<h3>FEATURED WORK</h3>
+				</div>
+				<div class="row">
+					<div class="col-md-6">.col-md-6</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">.col-md-6</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">.col-md-6</div>
+				</div>
+		  	</div>
+		  	<div class="col-md-2 projects shadow">
+		  		<div class="row project-header">
+					<h3>PROJECTS</h3>
+				</div>
+				<div class="row">
+					<div class="col-md-2 project-listing">Project Name</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 project-listing">Project Name</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 project-listing">Project Name</div>
+				</div>
+		  	</div>
+		</div>
+		<div class="row listing profile-listing profile-break experience">
+			<div class="col-md-12 shadow">
+				<div class="section-heading letter-spaced">
+		  			<h2>EXPERIENCE</h2>
+		  		</div>
+			</div>
+		</div>
+		<div class="row listing profile-listing profile-break skills">
+		  <div class="col-md-12 shadow">
+		  	<div class="section-heading letter-spaced">
+		  		<h2>SKILLS</h2>
+		  	</div>
+		  </div>
+		</div>
+		<div class="row listing profile-listing profile-break add-section">
+		  <div class="col-md-12 shadow">
+		  	<div class="section-heading letter-spaced">
+		  		<h2>ADD A SECTION</h2>
+		  	</div>
+		  </div>
+		</div>
+<!--
       <span><%= @user.fullname %></span><br />
       <span>From <%= @user.city %>, <%= @user.state %></span><br />
-      <span>Bio: <%= @user.bio %></span><br />
+      <span>Bio: <%= @user.bio %></span><br /> -->
 
       <% @user.posts.in_groups_of(3, false).each do |group| %>
       <div class='row'>

@@ -67,3 +67,114 @@ $blue: #22adc2;
 #readOnlyTags{
   border:0px !important;
 }
+
+/* CSS for profile page */
+
+.row{
+  overflow: hidden;
+}
+
+.profile-listing{
+  padding-top: 10px;
+}
+
+.artist{
+  height: 100%;
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+}
+
+.featured{
+  height: 100%;
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+}
+
+.projects{
+  height: 100%;
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+}
+
+.experience{
+  float: none;
+}
+
+.skills{
+  float: none;
+}
+
+.add-section{
+  float: none;
+}
+
+.profile-page-header h3{
+  margin:50px 0px 50px 0px;
+  font-family: Montserrat, 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.artist-header h2 {
+  font-size: 40px;
+  margin: 0px 0px 0px 50px;
+}
+
+.featured-header h3{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: $blue;
+  margin:15px 0px 2px 50px;
+}
+
+.project-header h3{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: $blue;
+  margin:15px 0px 10px 38px;
+}
+
+.project-listing{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: grey;
+  margin:15px 0px 15px 25px;
+  width:100%;
+}
+
+.section-heading h2{
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+.add-section-heading h2{
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+.image-placeholder{
+  display: block;
+  float: left;
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+  margin: 10px 0px 35px 50px;
+}
+
+.profile-break{
+  border-bottom: 2px solid grey;
+}
+
+.artist-location{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  font-size: 21px;
+  color: $blue;
+  float: right;
+  text-align: left;
+  margin: 10px 150px 0px 0px;
+}
