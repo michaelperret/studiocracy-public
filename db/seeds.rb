@@ -4,8 +4,8 @@ print "---------- Generating Seed Data ----------\n"
 # Temporary admin account
 u = User.new(
     email: "admin@example.com",
-    password: "1234",
-    password_confirmation: "1234",
+    password: "devPassword1",
+    password_confirmation: "devPassword1",
     admin: true
 )
 # u.skip_confirmation!
@@ -14,8 +14,8 @@ u.save!
 (1..10).each do |i|
 	u = User.new(
 		email: "user#{i}@example.com",
-		password: "1234",
-		password_confirmation: "1234",
+		password: "Password1",
+		password_confirmation: "Password1",
 		first_name: "user",
 		last_name: "\##{i}",
     image: File.new('app/assets/images/default_icon.jpg')
