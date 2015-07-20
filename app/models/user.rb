@@ -30,6 +30,14 @@ devise :omniauthable
   # Validations
   # :email
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  # :password
+  validate :password_complexity
+
+  def password_complexity
+    if not (password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/) or password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*[-+_!@#\$%^&*])/))
+      errors.add :password, "must include at least one lowercase letter, one uppercase letter, and either a number or special symbol -+_!@#$%^&*?"
+    end
+  end
 
   def self.paged(page_number)
     order(admin: :desc, email: :asc).page page_number
