@@ -34,8 +34,8 @@ devise :omniauthable
   validate :password_complexity
 
   def password_complexity
-    if not (password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/) or password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*[-+_!@#\$%^&*])/))
-      errors.add :password, "must include at least one lowercase letter, one uppercase letter, and either a number or special symbol -+_!@#$%^&*?"
+    if not (password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/) or password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*\(\)_\+\|~\-=\\\'\{}\[\]:";<>\?,\.\/])/))
+      errors.add :password, "must include at least one lowercase letter, one uppercase letter, and either a number or special symbol !@#\$%\^&\*\(\)_\+\|~\-=\\\'\{}\[\]:\";<>\?,\.\/"
     end
   end
 
