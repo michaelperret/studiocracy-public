@@ -30,6 +30,17 @@ devise :omniauthable
   # Validations
   # :email
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  # :password
+  validate :password_complexity
+
+  def password_complexity
+    puts provider
+    if (provider != "facebook")
+      if not (password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/) or password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*\(\)_\+\|~\-=\\\'\{}\[\]:";<>\?,\.\/])/))
+        errors.add :password, "must include at least one lowercase letter, one uppercase letter, and either a number or special symbol !@#\$%\^&\*\(\)_\+\|~\-=\\\'\{}\[\]:\";<>\?,\.\/"
+      end
+    end
+  end
 
   def self.paged(page_number)
     order(admin: :desc, email: :asc).page page_number
@@ -64,7 +75,7 @@ devise :omniauthable
 
   def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-    #user.provider = auth.provider
+    user.provider = auth.provider
     #user.uid = auth.uid
     user.first_name = auth.info.first_name
     user.last_name = auth.info.last_name
@@ -74,11 +85,15 @@ devise :omniauthable
 
     #user.image = auth.info.image
     user.email = auth.info.email
+    user.password= "test123Ah!"
+    user.save!
     #user.bio = auth.info.extra.raw_info.bio
     #user.oauth_token = auth.credentials.token
     #user.oauth_expires_at = Time.at(auth.credentials.expires_at)
     user.password = auth.uid
-    user.skip_confirmation!
+
+    # TODO: Uncomment when email confirmation is working
+    # user.skip_confirmation!
     user.save!
     end
   end
