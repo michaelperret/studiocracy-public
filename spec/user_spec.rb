@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe User do
-  before :each do
+  before :all do
     @user = User.new(
-        email: "test@rspec.com",
-        password: "testPassword1",
-        password_confirmation: "testPassword1",
-        first_name: "test",
-        last_name: "rspec",
-        image: File.new('app/assets/images/default_icon.jpg')
+      email: "test@rspec.com",
+      password: "testPassword1",
+      password_confirmation: "testPassword1",
+      first_name: "test",
+      last_name: "rspec",
+      image: File.new('app/assets/images/default_icon.jpg')
     )
   end
 
