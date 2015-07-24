@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  acts_as_messageable
-  devise :omniauthable
+
+devise :omniauthable
   
   # Relations
   has_many :posts
@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
-  # Confirmation email disabled due to timeout errors with our host
-  # , :confirmable
+# Confirmation email disabled due to timeout errors with our host
+# , :confirmable
   
   # Pagination
   paginates_per 100
@@ -72,17 +72,6 @@ class User < ActiveRecord::Base
   def fullname
     "#{first_name} #{last_name}"
   end
-
-  # Mailboxer methods
-  def name
-    return fullname
-  end
-
-  def mailboxer_email(object)
-    # TODO: set up email notifications for messages
-    return nil
-  end
-
 
   def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
