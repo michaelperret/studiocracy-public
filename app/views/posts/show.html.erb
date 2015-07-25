@@ -82,11 +82,10 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-                  <%= form_for :mailboxer_conversation,  url: :mailboxer_conversations  do |f| %>
+                  <%= form_for(:mailboxer_conversation) do |f| %>
                       <%= f.text_field :subject, :subject => params[:subject] %>
                       <%= f.text_field :message, :message => params[:message] %>
-                      <%= f.hidden_field :recipients, :recipients => params[:recipients], :value => @post.user.fullname %>_
-                      <%= f.submit "create" %>
+                      <%= f.submit "Submit" %>
                   <% end %>
 
                 </div>
