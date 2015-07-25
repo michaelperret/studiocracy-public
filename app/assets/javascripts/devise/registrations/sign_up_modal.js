@@ -1,3 +1,5 @@
-$(document).ready(function() {
-    $("#sign_up").modal({show:false});
+$(function() {
+    $("#sign_up input[type='radio']").hide();
+    
+    $('[data-toggle="popover"]').popover();
 });
