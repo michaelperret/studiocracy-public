@@ -3,7 +3,7 @@ class MailboxerConversationsController < ApplicationController
   helper_method :mailbox, :conversation
 
   def create
-    recipient_emails = conversation_params(:recipients).split(',')
+    recipient_emails = mailboxer_conversation_params(:recipients).split(',')
     recipients = User.where(email: recipient_emails).all
 
     conversation = current_user.
@@ -14,7 +14,7 @@ class MailboxerConversationsController < ApplicationController
 
   def reply
     current_user.reply_to_conversation(conversation, *message_params(:body, :subject))
-    redirect_to conversation_path(conversation)
+    redirect_to mailboxer_conversation_path(conversation)
   end
 
   def trash
@@ -37,8 +37,8 @@ class MailboxerConversationsController < ApplicationController
     @conversation ||= mailbox.conversations.find(params[:id])
   end
 
-  def conversation_params(*keys)
-    fetch_params(:conversation, *keys)
+  def mailboxer_conversation_params(*keys)
+    fetch_params(:mailboxer_conversation, *keys)
   end
 
   def message_params(*keys)
