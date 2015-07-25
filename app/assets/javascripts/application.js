@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require angular/angular.min
+//= require angular/angular-route.min
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui.min
@@ -20,7 +22,6 @@
 //= require jquery.infinite-pages
 //= require jquery.contenthover
 //= require overlay
-//= require jcarousel.responsive
 //= require tag-it.min
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts/.

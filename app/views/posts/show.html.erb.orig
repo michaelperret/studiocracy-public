@@ -81,6 +81,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<<<<<<< HEAD
                   <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
                   <%= form_for :mailboxer_conversation,  url: :mailboxer_conversations  do |f| %>
                       <%= f.text_field :subject, :subject => params[:subject] %>
@@ -89,6 +90,9 @@
                       <%= f.submit "create" %>
                   <% end %>
 
+=======
+                  <button type="button" class="btn btn-primary">Send</button>
+>>>>>>> upstream/master
                 </div>
               </div>
             </div>
