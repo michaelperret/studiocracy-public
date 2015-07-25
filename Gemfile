@@ -94,3 +94,6 @@ gem 'closure_tree'
 group :development, :test do
 gem 'foreman'
 end
+
+# Mailboxer for messaging
+gem 'mailboxer'
