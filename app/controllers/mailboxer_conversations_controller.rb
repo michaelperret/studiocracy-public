@@ -6,10 +6,16 @@ class MailboxerConversationsController < ApplicationController
     recipient_emails = mailboxer_conversation_params(:recipients).split(',')
     recipients = User.where(email: recipient_emails).all
 
-    conversation = current_user.
-        send_message(recipients, *mailboxer_conversation_params(:body, :subject)).mailboxer_conversation
+    puts (mailboxer_conversation_params)
 
-    redirect_to mailboxer_conversation_path(conversation)
+    conversation = current_user.
+        send_message(current_user, "Test", "test1").conversation
+        if (conversation)
+          puts ("Conversation!")
+        elsif
+          puts("Error! Conversation not created")
+        end
+    render :nothing => true
   end
 
   def reply
