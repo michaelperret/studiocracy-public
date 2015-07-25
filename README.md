@@ -18,6 +18,9 @@ Studiocracy addresses the difficulty emerging artists have with getting their wo
 * See onboarding guides for local setup here:
 https://drive.google.com/folderview?id=0BxTarWOIystqflByWkkzSy1VQTNUS2xpT2JsUWlxTThQdVpFdHdRWUdqVXNadHdab0dXQVk&usp=sharing
 * Read and follow this SO answer about the Github workflow: http://stackoverflow.com/questions/20956154/whats-the-workflow-to-contribute-to-an-open-source-project-using-git-pull-reque
+
+# Community
+* We meet on Sundays at 4 p.m. and Wednesdays at 7 p.m. Arizona time on Google Hangouts. Check the Slack for a link before each meeting.
 * We do project management on Taiga.io. You can see our current project status and to-do list here:
  https://tree.taiga.io/project/jcdjulian-studiocracy/
 * To become a member on our team on Taiga and receive assignments, make a Taiga account and email julian.deocampo@gmail.com for an invitation

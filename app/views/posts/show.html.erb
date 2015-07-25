@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-sm-6">
-    <h4 class="letter-spaced post-show-head"><%= @post.user.fullname.upcase %>
+    <h4 class="letter-spaced post-show-head">
+      // <%= link_to @post.user.fullname.upcase, user_path(@post.user) %>
       <% if @post.user.city != nil && @post.user.state != nil %>
           // <%= @post.user.city.upcase %>, <%= @post.user.state.upcase %>
       <% end %>
@@ -28,7 +29,10 @@
   <div class="col-md-4 col-sm-12 post-header">
     <h3><%= @post.title.upcase %></h3>
     <!--<%=image_tag(@post.image.url(:small)) %> PUT USER PIC HERE -->
-    <h4 class="open-sans"><%= @post.user.fullname %></h4><br/>
+    <h4 class="open-sans">
+      <%= link_to @post.user.fullname, user_path(@post.user) %>
+    </h4>
+    <br/>
 
     <!-- Insert icons -->
     <div class="row icons-row">
