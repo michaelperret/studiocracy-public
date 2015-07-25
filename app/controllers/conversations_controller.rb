@@ -1,4 +1,4 @@
-class MailboxerConversationsController < ApplicationController
+class ConversationsController < ApplicationController
   before_filter :authenticate_user!
   helper_method :mailbox, :conversation
 
@@ -7,9 +7,9 @@ class MailboxerConversationsController < ApplicationController
     recipients = User.where(email: recipient_emails).all
 
     conversation = current_user.
-        send_message(recipients, *mailboxer_conversation_params(:body, :subject)).mailboxer_conversation
+        send_message(recipients, *conversation_params(:body, :subject)).conversation
 
-    redirect_to mailboxer_conversation_path(conversation)
+    redirect_to conversation_path(conversation)
   end
 
   def reply
