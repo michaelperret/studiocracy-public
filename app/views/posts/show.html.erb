@@ -81,7 +81,13 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Send</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                  <%= form_for(:mailboxer_conversation) do |f| %>
+                      <%= f.text_field :subject, :subject => params[:subject] %>
+                      <%= f.text_field :message, :message => params[:message] %>
+                      <%= f.submit "Submit" %>
+                  <% end %>
+
                 </div>
               </div>
             </div>

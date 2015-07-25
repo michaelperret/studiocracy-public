@@ -6,11 +6,18 @@ Studiocracy::Application.routes.draw do
   resources :post_votes
 
   resources :comments, :has_many =>[:comment_votes]
-  resource  :comment_votes
+  resources  :comment_votes
 
   resources :charges
-
   resources :users
+
+  resources :mailboxer_conversations, only: [:index, :show, :new, :create] do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
 
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
