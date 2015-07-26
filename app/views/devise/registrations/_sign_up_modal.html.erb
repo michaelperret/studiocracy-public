@@ -19,8 +19,8 @@
                   <div class="col-md-3 col-md-offset-3 border-right">
                     
                     <div class="radio-inline">
-                      <%= f.radio_button :artist, "1" %>
-                      <%= f.label :artist_1, "ARTIST", title: "AS AN ARTIST", data: {toggle: "popover", 
+                      <%= f.radio_button :is_artist, "true" %>
+                      <%= f.label :is_artist_true, "ARTIST", title: "AS AN ARTIST", data: {toggle: "popover", 
                         content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.",
                         placement: "left", container: "body", trigger: "hover"} %>
                     </div>
@@ -30,8 +30,8 @@
                     
                     <div class="radio-inline">
                       
-                      <%= f.radio_button :artist, "0" %>
-                      <%= f.label :artist_0, "PATRON", title: "AS A PATRON", data: {toggle: "popover", 
+                      <%= f.radio_button :is_artist, "false" %>
+                      <%= f.label :is_artist_false, "PATRON", title: "AS A PATRON", data: {toggle: "popover", 
                         content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.",
                         placement: "right", container: "body", trigger: "hover"} %>
                     
