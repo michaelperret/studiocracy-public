@@ -33,6 +33,21 @@ class MailboxerConversationsController < ApplicationController
     redirect_to :conversations
   end
 
+  def index
+    @inbox = mailbox.inbox
+    @active = :inbox
+  end
+
+  def sent
+    @sent = mailbox.sentbox
+    @active = :sent
+  end
+
+  def trash
+    @trash = mailbox.trash
+    @active = :trash
+  end
+
   private
 
   def mailbox

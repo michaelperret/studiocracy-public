@@ -81,7 +81,7 @@ end
 gem "paperclip", "~> 4.2"
 
 #elasticsearch - in-site search engine
-gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
+gem 'elasticsearch'
 
 # Infinite scrolling + pagination gems
 gem 'will_paginate', '~> 3.0.5'
