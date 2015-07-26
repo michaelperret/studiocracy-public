@@ -81,26 +81,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-                  <script>
-                      $(document).ready(function() {
-                          $('#contact-form')
-                                  .bind('ajax:success', function () {
-                                      alert("Message sent!");
-                                  })
-                                  .bind("ajax:error", function (evt, xhr, status, error) {
-                                      alert("Error!!");
-                                  });
-                      });
-                  </script>
-                  <%= form_for :mailboxer_conversation,  url: :mailboxer_conversations, :remote => true,
-                               :html => {:id => 'contact-form'}  do |f| %>
-                      <%= f.text_field :subject, :subject => params[:subject] %>
-                      <%= f.text_field :message, :message => params[:message] %>
-                      <%= f.hidden_field :recipients, :recipients => params[:recipients], :value => @post.user.fullname %>_
-                      <%= f.submit 'create' %>
-                  <% end %>
-
+                  <button type="button" class="btn btn-primary">Send</button>
                 </div>
               </div>
             </div>

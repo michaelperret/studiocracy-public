@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     :destroy
   ]
 
-
+  
   def index
     @users = User.search_and_order(params[:search], params[:page])
   end
