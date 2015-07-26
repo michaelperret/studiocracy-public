@@ -1,6 +1,6 @@
 # Generated with RailsBricks
 # Initial seed file to use with Devise User Model
-print "---------- Generating Seed Data ----------\n"
+print "---------- Generating Seed Data ----------"
 # Temporary admin account
 u = User.new(
     email: "admin@example.com",
@@ -46,7 +46,8 @@ u.save!
 end
 
 # generate dummy comments
-(1..100).each do |i|
+print "\nGenerating comments"
+(1..500).each do |i|
   #-1)+1 in comment poster rand is to exclude the Admin account at 0
 	@comment_post = Post.offset(rand(Post.count)).first
 	@comment_poster = User.offset(rand(User.count-1)+1).first
@@ -56,7 +57,43 @@ end
 		post_id: @comment_post.id,
 		user: @comment_poster
 	)
-	print @comment_poster.fullname + " commented on " + @comment_post.user.fullname + "'s post\n"
 	c.save!
+	if i%50 == 0
+		print "."
+	end
 end
-print "---------- Seed Data Generated ----------\n"
+
+print "\nGenerating post votes"
+(1..1000).each do |i|
+	@target_post = Post.offset(rand(Post.count)).first
+	@voter = User.offset(rand(User.count-1)+1).first
+	if not PostVote.where(:post_id => @target_post.id, :user_id => @voter, :state => 1).present?
+		pv = PostVote.new(
+				user_id: @voter.id,
+				post_id: @target_post.id,
+				state: 1
+		)
+		pv.save!
+		if i%50 == 0
+			print "."
+		end
+	end
+end
+
+print "\nGenerating comment votes"
+(1..1000).each do |i|
+  @target_comment = Comment.offset(rand(Comment.count)).first
+  @voter = User.offset(rand(User.count-1)+1).first
+	if not CommentVote.where(:comment_id => @target_comment.id, :user_id => @voter).present?
+     cv = CommentVote.new(
+				user_id: @voter.id,
+				comment_id: @target_comment.id,
+				state: rand(3)-1
+		)
+		cv.save!
+		if i%50 == 0
+			print "."
+		end
+  end
+end
+print "\n\n---------- Seed Data Generated ----------\n"
