@@ -94,3 +94,9 @@ gem 'closure_tree'
 group :development, :test do
 gem 'foreman'
 end
+
+#mailboxer for private inboxes
+gem 'mailboxer'
+
+# jQuery plug-in for selecting from lists
+gem 'chosen-rails'
