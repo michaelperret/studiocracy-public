@@ -1,6 +1,18 @@
 class User < ActiveRecord::Base
 
 devise :omniauthable
+
+
+  #For Mailboxer private inboxes
+  acts_as_messageable
+
+  def mailboxer_name
+    self.fullname
+  end
+
+  def mailboxer_email(object)
+    self.email
+  end
   
   # Relations
   has_many :posts

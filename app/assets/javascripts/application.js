@@ -10,13 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require turbolinks
 //= require angular/angular.min
 //= require angular/angular-route.min
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui.min
-//= require turbolinks
-//= require bootstrap 
+//= require chosen-jquery
+//= require bootstrap
+//= require conversations
 //= require analytics
 //= require common
 //= require jquery.infinite-pages

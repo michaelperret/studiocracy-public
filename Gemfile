@@ -6,7 +6,7 @@ gem 'rails', '4.2.0'
 gem 'sass-rails', '5.0.1'
 gem 'uglifier', '2.7.1'
 gem 'coffee-rails', '4.1.0'
-gem 'jquery-rails', '4.0.3'
+gem 'jquery-rails', '4.0.4'
 gem 'turbolinks', '2.5.3'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '2.2.11'
@@ -94,3 +94,9 @@ gem 'closure_tree'
 group :development, :test do
 gem 'foreman'
 end
+
+#mailboxer for private inboxes
+gem 'mailboxer'
+
+# jQuery plug-in for selecting from lists
+gem 'chosen-rails'
