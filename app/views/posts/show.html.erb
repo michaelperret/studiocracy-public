@@ -77,18 +77,11 @@
                   <h4 class="modal-title" id="myModalLabel">Contact <span class="pink"><%= @post.user.fullname %></span></h4>
                 </div>
                 <div class="modal-body">
-                  <%= form_for :mailboxer_conversation,  url: :mailboxer_conversations, :remote => true,
-                               :html => {:id => 'contact-form'}  do |f| %>
-                      <%= f.label :subject, "Subject" %>
-                      <%= f.text_field :subject, :subject => params[:subject], :id => "contact-subject" %>
-                      <%= f.label :message, "Message" %>
-                      <%= f.text_area :message, :message => params[:message], :id => "contact-message" %>
-                      <%= f.hidden_field :recipients, :recipients => params[:recipients], :value => @post.user %>
+                  <textarea class="contact-message"></textarea>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <%= f.submit 'Send', :class => "btn btn-primary", :input_html => {"data-dismiss"=>"modal"} %>
-                  <% end %>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
                   <script>
                       $(document).ready(function() {
                           $('#contact-form')
@@ -100,6 +93,13 @@
                                   });
                       });
                   </script>
+                  <%= form_for :mailboxer_conversation,  url: :mailboxer_conversations, :remote => true,
+                               :html => {:id => 'contact-form'}  do |f| %>
+                      <%= f.text_field :subject, :subject => params[:subject] %>
+                      <%= f.text_field :message, :message => params[:message] %>
+                      <%= f.hidden_field :recipients, :recipients => params[:recipients], :value => @post.user.fullname %>_
+                      <%= f.submit 'create' %>
+                  <% end %>
 
                 </div>
               </div>
